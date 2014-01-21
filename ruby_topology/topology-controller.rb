@@ -99,9 +99,12 @@ class TopologyController < Controller
     # 送受信ノードがホストの場合
     if ! @topology.isInSameSlice?(source_host, dest_host, -1)
       # 別スライスなら無視
-      puts "These hosts are not in same slice."
+      puts "These hosts are NOT in same slice."
       return
     end
+
+    puts "These hosts are in same slice."
+
     dest_dpid = dest_host.dpid1  # 宛先スイッチのdpid
     source_dpid = source_host.dpid1  # 送信元スイッチのdpid
     # flow_mod(dest_dpid, message, SendOutPort.new(dest_host.port1))
