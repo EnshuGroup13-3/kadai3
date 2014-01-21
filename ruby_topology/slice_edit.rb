@@ -21,7 +21,7 @@ n_hosts_in_slice = Array.new
 n_slice = 0
 
 # ファイルパス
-fp_topology = open("sample1.conf","r")
+fp_topology = open("sample0.conf","r")
 fp_slice2 = open("slice_temple.txt","r")
 fp_slice = open("slice.txt","r")
 fp_detail = open("detail.txt","w")
